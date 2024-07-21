@@ -1,19 +1,12 @@
-require 'bundler'
-Bundler::GemHelper.install_tasks
+# frozen_string_literal: true
 
-require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new(:spec)
+require "bundler/gem_tasks"
+require "minitest/test_task"
 
-namespace :coverage do
-  desc "Open coverage report"
-  task :report do
-    require 'simplecov'
-    `open "#{File.join SimpleCov.coverage_path, 'index.html'}"`
-  end
-end
+Minitest::TestTask.create
 
-task :spec do
-  Rake::Task[:'coverage:report'].invoke unless ENV['TRAVIS_RUBY_VERSION']
-end
+require "rubocop/rake_task"
 
-task :default => :spec
+RuboCop::RakeTask.new
+
+task default: %i[test rubocop]

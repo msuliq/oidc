@@ -7,7 +7,7 @@ describe Rack::OAuth2::Server::Authorize::Extension::CodeAndIdToken do
   let(:redirect_uri) { 'http://client.example.com/callback' }
   let(:code)         { 'authorization_code' }
   let :id_token do
-    OpenIDConnect::ResponseObject::IdToken.new(
+    Oidc::ResponseObject::IdToken.new(
       iss: 'https://server.example.com',
       sub: 'user_id',
       aud: 'client_id',

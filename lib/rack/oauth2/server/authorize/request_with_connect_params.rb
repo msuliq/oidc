@@ -18,7 +18,7 @@ class Rack::OAuth2::Server::Authorize
       self.max_age = max_age.try(:to_i)
     end
 
-    def openid_connect_request?
+    def oidc_request?
       scope.include?('openid')
     end
   end

@@ -6,7 +6,7 @@ describe Rack::OAuth2::Server::Authorize::Extension::IdToken do
   let(:response)     { request.get('/?response_type=id_token&client_id=client&state=state') }
   let(:redirect_uri) { 'http://client.example.com/callback' }
   let :id_token do
-    OpenIDConnect::ResponseObject::IdToken.new(
+    Oidc::ResponseObject::IdToken.new(
       iss: 'https://server.example.com',
       sub: 'user_id',
       aud: 'client_id',
@@ -62,7 +62,7 @@ describe Rack::OAuth2::Server::Authorize::Extension::IdToken do
     let(:env)     { Rack::MockRequest.env_for("/authorize?client_id=client_id&scope=openid") }
     let(:request) { Rack::OAuth2::Server::Authorize::Extension::IdToken::Request.new env }
     it do
-      request.openid_connect_request?.should == true
+      request.oidc_request?.should == true
     end
   end
 end

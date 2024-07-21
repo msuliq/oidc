@@ -12,7 +12,7 @@ describe Rack::OAuth2::Server::Token::AuthorizationCode do
     })
   end
   let :id_token do
-    OpenIDConnect::ResponseObject::IdToken.new(
+    Oidc::ResponseObject::IdToken.new(
       iss: 'https://server.example.com',
       sub: 'user_id',
       aud: 'client_id',

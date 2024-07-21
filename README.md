@@ -1,0 +1,46 @@
+= Oidc
+
+OpenID Connect Server & Client Library
+
+== Installation
+
+  gem install oidc
+
+== Resources
+
+* View Source on GitHub (https://github.com/nov/oidc)
+* Report Issues on GitHub (https://github.com/nov/oidc/issues)
+* Subscribe Update Info (https://www.facebook.com/Oidc.rb)
+
+== Examples
+
+=== Provider
+
+* Running on Heroku (https://connect-op.herokuapp.com)
+* Source on GitHub (https://github.com/nov/oidc_sample)
+
+* Simpler Version (https://github.com/nov/oidc_sample2)
+
+=== Relying Party
+
+* Running on Heroku (https://connect-rp.herokuapp.com)
+* Source on GitHub (https://github.com/nov/oidc_sample_rp)
+
+There is also OpenID Foudation Certified RP implementation using this gem below.
+
+* Running on Heroku (https://connect-rp-certified.herokuapp.com)
+* Source on GitHub (https://github.com/nov/connect-rp-certified)
+
+== Note on Patches/Pull Requests
+
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2011 nov matake. See LICENSE for details.

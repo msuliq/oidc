@@ -7,7 +7,7 @@ describe Rack::OAuth2::Server::Authorize::Extension::IdTokenAndToken do
   let(:redirect_uri) { 'http://client.example.com/callback' }
   let(:bearer_token) { Rack::OAuth2::AccessToken::Bearer.new(access_token: 'access_token') }
   let :id_token do
-    OpenIDConnect::ResponseObject::IdToken.new(
+    Oidc::ResponseObject::IdToken.new(
       iss: 'https://server.example.com',
       sub: 'user_id',
       aud: 'client_id',

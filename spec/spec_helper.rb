@@ -6,7 +6,7 @@ end
 
 require 'rspec'
 require 'rspec/its'
-require 'openid_connect'
+require 'oidc'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
